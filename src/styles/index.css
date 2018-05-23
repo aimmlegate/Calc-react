@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.calc-layout {
+  display: grid;
+  max-width: 400px;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 2px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.answer-btn {
+  grid-column: 4;
+  grid-row: 4 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container {
+  margin: 0 auto;
+  width: 400px;
+  padding: 20px;
+}

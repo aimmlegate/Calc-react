@@ -1,4 +1,4 @@
 Simple calculator
 
 
-http://hnoxious-snakes.surge.sh/
+http://lean-nerve.surge.sh/

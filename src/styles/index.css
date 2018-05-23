@@ -27,3 +27,8 @@ body {
   width: 400px;
   padding: 20px;
 }
+
+.return {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

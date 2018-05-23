@@ -29,7 +29,7 @@ class App extends Component {
     },
     backspace: () => {
       const { str } = this.state;
-      const newStr = str.slice(0, -1);
+      const newStr = (str.length === 1) ? '0' : str.slice(0, -1);
       this.setState({ str: newStr });
     },
     summ: () => {
@@ -52,7 +52,7 @@ class App extends Component {
       case (val === '<'):
         this.dispatch.backspace();
         break;
-        case (val === '='):
+      case (val === '='):
         this.dispatch.summ();
         break;
       case (Number.isNaN(parseVal)):
@@ -66,7 +66,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="alert alert-primary" role="alert">
+        <div className="alert alert-primary return" role="alert">
           {this.state.str}
         </div>
         <div className="calc-layout">
@@ -88,7 +88,7 @@ class App extends Component {
           <div className="btn btn-warning answer-btn" onClick={this.pressHandler('=')}>=</div>
           <div className="btn btn-primary" onClick={this.pressHandler('%')}>%</div>
           <div className="btn btn-primary" onClick={this.pressHandler('0')}>0</div>
-          <div className="btn btn-primary" onClick={this.pressHandler(',')}>.</div>
+          <div className="btn btn-primary" onClick={this.pressHandler('.')}>.</div>
         </div>
       </div>
     );

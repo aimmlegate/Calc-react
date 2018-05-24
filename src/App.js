@@ -29,7 +29,7 @@ class App extends Component {
     },
     backspace: () => {
       const { str } = this.state;
-      const newStr = (str.length === 1) ? '0' : str.slice(0, -1);
+      const newStr = ((str.length === 1) || (str === 'Infinity')) ? '0' : str.slice(0, -1);
       this.setState({ str: newStr });
     },
     summ: () => {

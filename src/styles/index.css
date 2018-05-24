@@ -6,7 +6,6 @@ body {
 
 .calc-layout {
   display: grid;
-  max-width: 400px;
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -24,7 +23,7 @@ body {
 
 .app-container {
   margin: 0 auto;
-  width: 400px;
+  max-width: 400px;
   padding: 20px;
 }
 

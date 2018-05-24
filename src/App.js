@@ -40,6 +40,16 @@ class App extends Component {
       }
       const result = safeEval(str);
       this.setState({ str: result.toString() });
+    },
+    procent: () => {
+      let { str } = this.state;
+      const last = parseInt(str.slice(-1), 10);
+      if (Number.isNaN(last)) {
+        str = str.slice(0, -1);
+      }
+      const resultStr = safeEval(str);
+      const res = resultStr/100;
+      this.setState({ str: res.toString() });
     }
   }
 
@@ -54,6 +64,9 @@ class App extends Component {
         break;
       case (val === '='):
         this.dispatch.summ();
+        break;
+      case (val === '%'):
+        this.dispatch.procent();
         break;
       case (Number.isNaN(parseVal)):
         this.dispatch.operators(val);

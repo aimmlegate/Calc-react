@@ -48,7 +48,7 @@ class App extends Component {
         str = str.slice(0, -1);
       }
       const resultStr = safeEval(str);
-      const res = resultStr/100;
+      const res = resultStr / 100;
       this.setState({ str: res.toString() });
     }
   }
